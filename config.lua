@@ -6,6 +6,7 @@
 -- definindo plugins
 lvim.plugins = {
   { "Mofiqul/dracula.nvim" }, -- tema dos chads
+  { "catppuccin/nvim" },      -- tema dos chads 2
   {
     "github/copilot.vim",
     event = "VeryLazy",
@@ -28,7 +29,7 @@ lvim.plugins = {
 }
 
 -- definindo o colorscheme padrão
-lvim.colorscheme = "dracula"
+lvim.colorscheme = "catppuccin-mocha"
 
 -- janela transparente
 lvim.transparent_window = true
