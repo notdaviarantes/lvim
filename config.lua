@@ -78,8 +78,11 @@ vim.opt.clipboard = ""
 -- faz com que o cursor permaneça no mesmo lugar após usar J
 lvim.keys.normal_mode["J"] = "mzJ`z"
 
--- habilita o line wrap
-vim.opt.wrap = true
+-- line wrap: deixo desabilitado por padrão
+vim.opt.wrap = false
+
+-- mudando o estilo do cursor no modo normal para bloco
+vim.opt.guicursor = "n-v-c:block"
 
 -- quando eu me mover pela página usando control + d e control + u, o cursor permanece no mesmo lugar
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
