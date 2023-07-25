@@ -46,24 +46,16 @@ vim.opt.cursorline = false
 -- ativando os números relativos
 vim.opt.relativenumber = true
 
--- definindo formatadores de código
+-- definindo formatadores
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
   {
     name = "prettier",
     filetypes = { "javascript", "typescript", "json", "yaml", "html", "css", "scss", "markdown" },
-  },
-  {
-    name = "eslint",
-    filetypes = { "javascript", "typescript", "vue" },
+    -- definindo singlequotes como true
+    args = { "--single-quote" },
   },
 })
-
--- definindo linters de código
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { name = "eslint" },
-}
 
 -- desligando o mapeamento do tab para o cmp
 lvim.builtin.cmp.mapping["<Tab>"] = nil
