@@ -27,6 +27,9 @@ lvim.plugins = {
       vim.o.timeoutlen = 500
     end
   }, -- esse aqui basicamente facilita o processo de adicionar texto ao redor de palavras, abre no github pra ver como funciona
+  {
+    "kdheepak/lazygit.nvim"
+  }
 }
 
 -- definindo o colorscheme padrão
