@@ -58,6 +58,19 @@ formatters.setup({
     -- definindo singlequotes como true
     args = { "--single-quote" },
   },
+  {
+    name = "black",
+    filetypes = { "python" },
+  }
+})
+
+-- definindo linters
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+  {
+    name = "mypy",
+    filetypes = { "python" },
+  }
 })
 
 -- desligando o mapeamento do tab para o cmp
@@ -117,3 +130,6 @@ lvim.keys.visual_mode["<leader>d"] = '\"_d'
 -- usar control j e control k para se mover pelo menu do telescope
 lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = require("telescope.actions").move_selection_next
 lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = require("telescope.actions").move_selection_previous
+
+-- remapeando a ativação do visual block mode para <leader>v
+lvim.keys.normal_mode["<leader>v"] = "<C-v>"
