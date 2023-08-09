@@ -29,7 +29,10 @@ lvim.plugins = {
   }, -- esse aqui basicamente facilita o processo de adicionar texto ao redor de palavras, abre no github pra ver como funciona
   {
     "kdheepak/lazygit.nvim"
-  }
+  },
+  {
+    "iamcco/markdown-preview.nvim" -- markdown preview, autoexplicativo
+  },
 }
 
 -- definindo o colorscheme padrão
