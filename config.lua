@@ -36,7 +36,7 @@ lvim.plugins = {
 }
 
 -- definindo o colorscheme padrão
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "tokyonight-night"
 
 -- janela transparente
 lvim.transparent_window = true
@@ -57,7 +57,7 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
   {
     name = "prettier",
-    filetypes = { "javascript", "typescript", "json", "yaml", "html", "css", "scss", "markdown" },
+    filetypes = { "javascript", "typescript", "json", "yaml", "html", "css", "scss", --[[  "markdown" ]] },
     -- definindo singlequotes como true
     args = { "--single-quote" },
   },
@@ -136,3 +136,17 @@ lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = require("telescope.actions
 
 -- remapeando a ativação do visual block mode para <leader>v
 lvim.keys.normal_mode["<leader>v"] = "<C-v>"
+
+lvim.builtin.alpha.dashboard.section.header.val = {
+  [[     _O_        _____         _<>_          ___     ]],
+  [[   /     \     |     |      /      \      /  _  \   ]],
+  [[  |==/=\==|    |[/_\]|     |==\==/==|    |  / \  |  ]],
+  [[  |  O O  |    / O O \     |   ><   |    |  |"|  |  ]],
+  [[   \  V  /    /\  -  /\  ,-\   ()   /-.   \  X  /   ]],
+  [[   /`---'\     /`---'\   V( `-====-' )V   /`---'\   ]],
+  [[   O'_:_`O     O'M|M`O   (_____:|_____)   O'_|_`O   ]],
+  [[    -- --       -- --      ----  ----      -- --    ]],
+  [[   STAN         KYLE        CARTMAN        KENNY    ]],
+}
+
+lvim.builtin.alpha.dashboard.section.footer.val = { "the real chad" }
